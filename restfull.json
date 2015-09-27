@@ -1,0 +1,45 @@
+{
+    "repoName": "test-thing",
+    "repoDescription": "dsjkfljsdklfjl",
+    "framework": "sails",
+    "database": "mongo",
+    "schemas": [
+        {
+            "name": "artist",
+            "attributes": [
+                {
+                    "key": "name",
+                    "type": "string",
+                    "autoIncrement": false,
+                    "unique": false,
+                    "primaryKey": false,
+                    "required": true,
+                    "collection": false
+                },
+                {
+                    "key": "songs",
+                    "autoIncrement": false,
+                    "unique": false,
+                    "primaryKey": false,
+                    "required": false,
+                    "collection": "song",
+                    "via": "artist"
+                }
+            ]
+        },
+        {
+            "name": "song",
+            "attributes": [
+                {
+                    "key": "title",
+                    "type": "string",
+                    "autoIncrement": false,
+                    "unique": false,
+                    "primaryKey": false,
+                    "required": false,
+                    "collection": false
+                }
+            ]
+        }
+    ]
+}
